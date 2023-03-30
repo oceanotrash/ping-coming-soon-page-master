@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 20px
+
+### Fonts
+
+- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com) */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-size: 2.8rem;
+  margin-bottom: 1.3rem;
+  color: hsl(209, 33%, 12%);
+}
+
+span {
+  font-weight: 500;
+  color: hsl(0, 0%, 59%);
+}
+
+.sub-heading {
+  margin-bottom: 1.3rem;
+  color: hsl(209, 33%, 12%);
+}
+
+form {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+form input[type="email"] {
+  height: 50px;
+  width: 100%;
+  border-radius: 2rem;
+  padding-left: 15px;
+  border: 2px solid hsl(223, 100%, 88%);
+  font-size: 1rem;
+  color: black;
+  outline: none;
+}
+
+form input[type="email"]::placeholder {
+  color: hsl(223, 100%, 88%);
+  font-family: inherit;
+}
+
+form button {
+  background-color: hsl(223, 87%, 63%);
+  width: 100%;
+  border: none;
+  height: 50px;
+  border-radius: 2rem;
+  margin-top: 0.9rem;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  box-shadow: 0px 0px 20px hsla(210, 32%, 12%, 0.39);
+  cursor: pointer;
+}
+
+form.error input[type="email"] {
+  border-color: hsl(354, 100%, 66%);
+  margin-bottom: 30px;
+}
+
+.error-message {
+  position: absolute;
+  top: 70px;
+  font-weight: 500;
+  color: hsl(354, 100%, 66%);
+  font-size: 0.8rem;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.socials {
+  display: flex;
+  margin-top: 5.5rem;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials a {
+  border-radius: 50%;
+  border: 2px solid white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+
+  box-shadow: 0px 0px 20px hsla(208, 31%, 12%, 0.199);
+  text-decoration: none;
+}
+
+.socials a i {
+  color: hsl(223, 87%, 63%);
+  font-size: 1.2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.socials a:active
+{
+  background-color: hsl(223, 87%, 63%);
+}
+
+.socials a i:active
+{
+  color: hsl(0, 0%, 100%);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin-top: 3rem;
+  color: hsl(0, 0%, 59%);
+}
+
+@media only screen and (min-width: 768px) {
+  form {
+    flex-direction: row;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+
+  form button {
+    width: 40%;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  form input[type="email"] {
+    margin-bottom: 0;
+  }
+
+  .hero-image {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  form.error .error-message {
+    left: 30px;
+  }
+
+  form.error input[type="email"]
+  {
+    margin: 0;
+  }
+}
